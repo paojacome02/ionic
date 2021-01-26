@@ -14,4 +14,9 @@ export class ColorsService {
   getColors(): Observable<ColorsResponse>{
     return this.http.get<ColorsResponse>(Endpoints.colors);
   }
+
+  getSingleColor(id: number): Observable<ColorsResponse>{
+
+    return this.http.get<ColorsResponse>(`${Endpoints.colors}/${id}`);
+  }
 }

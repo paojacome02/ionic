@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./color/color.module').then( m => m.ColorPageModule)
   },
   {
+    path: 'color/:id',
+    loadChildren: () => import('./color/color.module').then( m => m.ColorPageModule)
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'

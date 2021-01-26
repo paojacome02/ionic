@@ -9,7 +9,7 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let color of colors">
-      <ion-card>
+      <ion-card (click)="itemClick(color.id)">
         <ion-card-title>
           {{color.name}}
           <div class="color-sample" [ngStyle]="{'background': color.color}"></div>
